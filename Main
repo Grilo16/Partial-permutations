@@ -1,1 +1,16 @@
-
+def partial_perm_count(N,k):
+    number = factorial(N)
+    subset = factorial(N-k)
+    partialperms = number/subset
+    answer = partialperms %1000000
+    return answer
+    
+    
+def factorial(x):
+    result = 1
+    for i in range(2, x + 1):
+        result *= i
+    return result
+    
+           
+print(partial_perm_count(93,9))
